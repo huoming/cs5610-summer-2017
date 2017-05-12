@@ -1,0 +1,22 @@
+Six constraints:
+			Uniform Interface
+			Stateless
+			Cacheable
+			Client-Server
+			Layered System
+			Code on Demand (optional)
+
+
+● Client server communication
+
+Client-server architecture have a very distinct separation of concerns, with migrating most of business login from server to client. Server remains only as data serving center, with aim to be fast and reliable.
+
+● Stateless
+
+Server must be able to completely understand the client request without using any server context or server session state. It follows that all state must be kept on the client.
+
+● Uniform Interface
+
+All components must interact through a single uniform interface. Because all component interaction occurs via this interface, interaction with different services is very simple. The interface is the same. This also means that implementation changes can be made in isolation. Such changes will not affect fundamental component interaction because uniform interface is always unchanged.
+
+The tradeoff for all of this flexibility is a lack of strongly set standards. REST really describes the method by which the data is transferred, but implementers have been left mostly on their own to figure out how this data should look.

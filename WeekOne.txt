@@ -1,0 +1,44 @@
+WEEK ONE
+
+1. Introduction of MEAN and schedule
+--what is Responsive Design?
+Description: 	respond to the user’s behavior and environment based on screen size, platform and orientation
+Implementation: bootstrap 
+
+--what is SPA (single page application)?
+Description: 	fits on a single web page with the goal of providing a user experience similar to that of a desktop application
+Implementation: async (AngularJS, Ajax)
+
+--what is REST (Representational State Transfer) API?
+Description:	Offer access throught resources, for example: /cs5610/summer/course/123/
+				Represent resources by representations, for example: /cs5610/summer/course/123/ - require the format in request header
+				Exchange self-descriptive messages, for example: /cs5610/summer/course/status?active=1&page=1
+Concepts:		Resource, EndPoints, Base URIs, HTTP Methods (CRUD operation)				
+
+Implementation: express
+Tools: 			POSTMAN, RESTfull and more
+
+
+2. Download and installation
+-Github
+-WebStorm
+-Heroku CLI
+-node js
+-mongo db
+
+
+3. Set up development environment
+- invite TA and me as collaborator of your git repo
+
+4. Grade
+- assignments (45%)
+assignment one: 	set up dev environment
+assignment two: 	user interface development 
+assignment three:	client side development
+assignment four:	server side development
+assignment five:	database development
+assignment six:		security and user management
+
+- project (50%)
+
+- homepage (5%)

@@ -1,0 +1,6 @@
+echo "# cs5610-summer-2017" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:huoming/cs5610-summer-2017.git
+git push -u origin master
