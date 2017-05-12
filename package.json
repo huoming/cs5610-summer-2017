@@ -1,0 +1,24 @@
+{
+  "name": "summer-webdev-2017",
+  "version": "1.0.0",
+  "description": "web dev course 2017 summer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huoming/cs5610-summer-2017.git"
+  },
+  "keywords": [
+    "web",
+    "dev",
+    "angular"
+  ],
+  "author": "Ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huoming/cs5610-summer-2017/issues"
+  },
+  "homepage": "https://github.com/huoming/cs5610-summer-2017#readme"
+}
