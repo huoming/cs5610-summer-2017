@@ -4,3 +4,36 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:huoming/cs5610-summer-2017.git
 git push -u origin master
+
+git status
+git add .
+git commit -am "my comments"
+git push
+git remote -v
+
+git pull
+git checkout existing_branch_name
+git checkout -b new_branch_name
+git branch -d delete_branch_name
+git branch -a
+
+git checkout develop_branch
+git pull
+git checkout master
+git merge develop_branch
+git push
+
+git show-ref --heads
+
+---in git bash--
+git config --global user.email "your_email@address"
+ssh-keygen -t rsa -b 4096 -C "your_email@address"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+clip < ~/.ssh/id_rsa.pub
+
+ssh -T git@your_git_repo.git
+git remote set-url origin https://github.com/your_git_repo.git
+git remote set-url origin git@github.com:yourname/yourrepo.git
+
+

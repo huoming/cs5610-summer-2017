@@ -28,7 +28,10 @@ Tools: 			POSTMAN, RESTfull and more
 
 
 3. Set up development environment
-- invite TA and me as collaborator of your git repo
+- using github.com as your code repo and add .gitignore file
+- config webstorm
+- run hello.js file in node js
+- download mongo db
 
 4. Grade
 - assignments (45%)
