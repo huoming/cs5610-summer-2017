@@ -10,4 +10,4 @@ var port      = 3000;
 app.use(express.static(__dirname+'/public'));
 app.listen(port, ipaddress);
 
-console.log("hello world1");
+console.log("hello world!");
