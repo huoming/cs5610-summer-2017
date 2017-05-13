@@ -22,6 +22,12 @@
   },
   "homepage": "https://github.com/huoming/cs5610-summer-2017#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.8",
+    "mule": "^0.1.0"
   }
 }

@@ -1,5 +1,18 @@
 WEEK ONE
 
+Web resource: http://portal-cs5610online.rhcloud.com/
+
+Email:
+ming.huo@gmail.com
+
+TA Emails:
+Ying Zhang <zhang.ying6@husky.neu.edu>
+Rahul Mathen Thomas <thomas.rah@husky.neu.edu>
+Brian Daniel Sherrill <sherrill.b@husky.neu.edu>
+
+TA Session:
+Wed 4:00PM to 6:0PM
+
 1. Introduction of MEAN and schedule
 --what is Responsive Design?
 Description: 	respond to the user’s behavior and environment based on screen size, platform and orientation
@@ -18,22 +31,27 @@ Concepts:		Resource, EndPoints, Base URIs, HTTP Methods (CRUD operation)
 Implementation: express
 Tools: 			POSTMAN, RESTfull and more
 
-
 2. Download and installation
 -Github
--WebStorm
--Heroku CLI
--node js
+
+-node js -- npm/bower
+--- npm init
+--- npm install package_you_need --save
+
 -mongo db
 
+-WebStorm
+
+-Heroku CLI/AWS
+---add mLab in heroku
 
 3. Set up development environment
-- using github.com as your code repo and add .gitignore file
-- config webstorm
-- run hello.js file in node js
+- using github.com as your code repo, make your first commit and add .gitignore file
+- config webstorm to run node js
+- run hello.js file in command line
 - download mongo db
 
-4. Grade
+4. Grade - due on Sunday night
 - assignments (45%)
 assignment one: 	set up dev environment
 assignment two: 	user interface development 
@@ -45,3 +63,7 @@ assignment six:		security and user management
 - project (50%)
 
 - homepage (5%)
+-Your name
+-Email
+-Phone (optional)
+

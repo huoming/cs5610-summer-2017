@@ -5,23 +5,29 @@ git commit -m "first commit"
 git remote add origin git@github.com:huoming/cs5610-summer-2017.git
 git push -u origin master
 
+--for pushing a commit to remote repo---
 git status
 git add .
 git commit -am "my comments"
 git push
 git remote -v
 
+---sync with remote repo---
 git pull
-git checkout existing_branch_name
-git checkout -b new_branch_name
-git branch -d delete_branch_name
-git branch -a
 
+---merging develop branch to master---
 git checkout develop_branch
 git pull
 git checkout master
 git merge develop_branch
 git push
+
+
+--create a branch--
+git checkout existing_branch_name
+git checkout -b ne_branch_name
+git branch -d delete_branch_name
+git branch -a
 
 git show-ref --heads
 
