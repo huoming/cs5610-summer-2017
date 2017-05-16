@@ -1,0 +1,28 @@
+Week Two
+
+Express JS - Introduction
+
+HTML5 - Introduction
+HTML5 is a markup language used for structuring and presenting content on the World Wide Web.
+
+-- DOM
+The Document Object Model (DOM) is a programming interface for HTML and XML documents.
+It provides a structured representation of the document.
+It defines a way that the structure can be accessed from programs so that they can change the document structure, style and content.
+
+When a web page is loaded, the browser creates a Document Object Model of the page.
+The HTML DOM model is constructed as a tree of Objects.
+
+CSS - Cascading Style Sheets
+-- inline CSS
+-- customer css file
+-- template css file (bootstrap)
+
+Bootstrap
+--Install
+--Use locally
+--Use CDN
+--Grid System
+
+Add mLab in Heroku
+Set up ssh key on github
