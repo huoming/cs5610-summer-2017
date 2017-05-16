@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Examples</title>
+
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel= "stylesheet">
+    <style>
+        #left_float{
+            width: 300px;
+            float: left;
+        }
+        .right_float{
+            width: 300px;
+            float: right;
+        }
+        .change_color{
+            background-color: deepskyblue;
+        }
+    </style>
+
+    <style>
+        #p1{
+            background-color: deepskyblue;
+            width: 500px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            top: 50px;
+            left: 500px;
+            /*z-index: 0;*/
+        }
+        #p2{
+            background-color: green;
+            width: 500px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            top: 100px;
+            left: 600px;
+            /*z-index: 1;*/
+        }
+        #p3{
+            background-color: brown;
+            width: 500px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            top: 150px;
+            left: 750px;
+            /* z-index: 2;*/
+        }
+    </style>
+
+    <style>
+        table { border-collapse: collapse; }
+        tr { border:solid; }
+        td {
+            border-right: solid 5px #f00;
+            border-left: solid 5px #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1> Anchor Example</h1>
+            <li><a href="anchor.html">Home</a></li>
+            <li><a href="profile.html"> Profile</a></li>
+            <li><a href="users.html">Users</a></li>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>List Example</h1>
+            <ul>
+                <li>item one</li>
+                <li>item two</li>
+                <li>item three</li>
+                <ul>
+                    <li>item one small</li>
+                    <li>item two small</li>
+                </ul>
+            </ul>
+            <ol class="change_color">
+                <li>item one</li>
+                <li>item two</li>
+                <li>item three</li>
+                <ol>
+                    <li>item one</li>
+                    <li>item two</li>
+                    <li>item three</li>
+                </ol>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4"><h1>Blocks 1 Example</h1></div>
+        <div class="col-lg-4"><h2>Blocks 2 Example</h2></div>
+        <div class="col-lg-4"><h3>Blocks 3 Example</h3></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Float Example</h1>
+            <!-- <p id="left_float" class="right_float">
+                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishi
+             </p>-->
+            <b>Lorem Ipsum </b>
+            <p class="right_float">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishi
+            </p>
+            <p id="left_float">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishi
+            </p>
+        </div>
+
+
+        <!--        <p class="change_color">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishi
+                </p>-->
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Table example</h1>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Title</th>
+                        <th>Section</th>
+                        <th>Seats</th>
+                        <th>Start Date</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Java</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>01/10/2016</td>
+                    </tr>
+                    <tr>
+                        <!--<td>Java</td>-->
+                        <td>1</td>
+                        <td>100</td>
+                        <td>01/10/2016</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>01/10/2016</td>
+                    </tr>
+                    <tr>
+                        <td>F#</td>
+                        <td>1</td>
+                        <td>100</td>
+                        <td>01/10/2016</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="container-fluid col-lg-12">
+            <p id="p1">
+                BLUE-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <p id="p2">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+            </p>
+
+            <p id="p3">
+                RED---Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <p>
+                They can be of two types: .container has different widths for different types of devices whereas .container-fluid expands to fit the width of the device.
+            </p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
