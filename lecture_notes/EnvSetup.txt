@@ -14,34 +14,12 @@ TA Session:
 Wed 4:00PM to 6:0PM
 
 1. Introduction of MEAN and schedule
---what is Responsive Design?
-Description: 	respond to the user’s behavior and environment based on screen size, platform and orientation
-Implementation: bootstrap 
-
---what is SPA (single page application)?
-Description: 	fits on a single web page with the goal of providing a user experience similar to that of a desktop application
-Implementation: async (AngularJS, Ajax)
-
---what is REST (Representational State Transfer) API?
-Description:	Offer access throught resources, for example: /cs5610/summer/course/123/
-				Represent resources by representations, for example: /cs5610/summer/course/123/ - require the format in request header
-				Exchange self-descriptive messages, for example: /cs5610/summer/course/status?active=1&page=1
-Concepts:		Resource, EndPoints, Base URIs, HTTP Methods (CRUD operation)				
-
-Implementation: express
-Tools: 			POSTMAN, RESTfull and more
 
 2. Download and installation
--Github
-
--node js -- npm/bower
---- npm init
---- npm install package_you_need --save
-
+-Git bash
+-node js
 -mongo db
-
 -WebStorm
-
 -Heroku CLI/AWS
 ---add mLab in heroku
 
