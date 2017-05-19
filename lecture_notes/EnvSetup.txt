@@ -13,6 +13,30 @@ Brian Daniel Sherrill <sherrill.b@husky.neu.edu>
 TA Session:
 Wed 4:00PM to 6:0PM
 
+Your TA:
+Ying Zhang	ai.x	          Xiao	Ai
+Ying Zhang	bonicillo.m	    Mark	Bonicillo
+Ying Zhang	chaudhari.m	    Manasi	Chaudhari
+Ying Zhang	chen.xiao3	    Xiao	Chen
+Ying Zhang	chen.ying	      Ying	Chen
+Ying Zhang	day.a	          Alice	Day
+Ying Zhang	gaston.b	      Brittany	Gaston
+
+Rahul Mathen Thomas	huang.wenl	  Wenlin	Huang
+Rahul Mathen Thomas	liang.yin	    Yingbin	Liang
+Rahul Mathen Thomas	linderman.l	  Lucy	Linderman
+Rahul Mathen Thomas	liu.an	      Anyang	Liu
+Rahul Mathen Thomas	liu.chang1	  Chang	Liu
+Rahul Mathen Thomas	min.lu	      Luying	Min
+
+Brian Daniel Sherrill	rajagopal.sh	Shravanthi	Rajagopal
+Brian Daniel Sherrill	sharma.man	  Manika	Sharma
+Brian Daniel Sherrill	shen.yanc	    Yanchao	Shen
+Brian Daniel Sherrill	song.zhe2	    Zhe	Song
+Brian Daniel Sherrill	wang.jing	    Jing	Wang
+Brian Daniel Sherrill	wu.we	        Weilu	Wu
+Brian Daniel Sherrill	zhang.chi5	  Chi	Zhang
+
 1. Introduction of MEAN and schedule
 
 2. Download and installation
