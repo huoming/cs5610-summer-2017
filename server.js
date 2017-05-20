@@ -5,7 +5,7 @@ var express = require('express');
 var app = express();
 
 //var ipaddress = '127.0.0.1';
-var port      = process.env.PORT || 8080;
+var port      = process.env.PORT;
 
 app.use(express.static(__dirname+'/public'));
 //app.listen(port, ipaddress);
