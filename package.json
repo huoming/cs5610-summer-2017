@@ -27,6 +27,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "express-session": "^1.15.2",
+    "jquery": "^3.2.1",
     "mongoose": "^4.9.8",
     "mule": "^0.1.0"
   }

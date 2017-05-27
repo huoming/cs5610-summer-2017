@@ -87,3 +87,17 @@ a:hover{
 .cl-zero-right-padding{
     padding-right: 0px;
 }
+
+.cl-list-item-borderless {
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+}
+
+.cl-widget-images{
+    display: inline;
+    width: 85%;
+    z-index: 100;
+    position: relative;
+}

@@ -1,25 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Scripts</title>
-    <script>
-        alert("Hello World");
-    </script>
+    <meta charset="UTF-8">
+    <title>Java Script</title>
 </head>
 <body>
-<h1>Intro to JavaScript</h1>
 
+<h1>Test Inner HTML</h1>
+<!--<h2 style="background-color: #2aabd2" id="message"></h2>-->
 <p>
-    JavaScript allows programming in the browser.
-    Use the <code>alert()</code> function to
-    display an alert box with a message
+    Change the content of HTML using the innerHTML attribute.
 </p>
-<p>To display script as HTML text, you need to do html encoding</p>
 
-<pre>
-&lt;script&gt;
-  alert(&quot;Hello World&quot;);
-&lt;/script&gt;</pre>
+<h2 id="message" style="background-color: #2aabd2">Nothing Happen</h2>
+
+<script>
+    var msg = document.getElementById("message");
+    msg.innerHTML = "Hello world via javascript";
+</script>
+
+<h1>Arrays</h1>
+<p>
+    Use arrays to represent a collection of data such as
+    a collection of integers or collection of objects.
+    The script below defines a collection of integers and
+    then iterates over the array looking for the maximum
+    and minimum value.
+</p>
+
+<h2 id="max"></h2>
+<h2 id="min"></h2>
+
+<script>
+    var values = [12,32,34,54,56,76,78,98,90,100];
+    var min = 200;
+    var max = -1;
+    for(var i=0; i<values.length; i++)
+    {
+        if(values[i] < min)
+        {
+            min = values[i];
+        }
+        if(values[i] > max)
+        {
+            max = values[i];
+        }
+    }
+    /* alert(min);
+     alert(max);*/
+     document.getElementById("max").innerHTML = max;
+     document.getElementById("min").innerHTML = min;
+</script>
+
+<h1>Document Object</h1>
+
+<script>
+    document.write("Hello World-hello world again!");
+</script>
+
+<h1>Dynamic HTML</h1>
+
+<script>
+    document.write("<ul>");
+    for(var i=0; i<5; i++)
+    {
+        document.write("<li>")
+        document.write("Hello " + i)
+        document.write("</li>")
+    }
+    document.write("</ul>");
+</script>
+
+<h1>Math</h1>
+
+7 + 4 =
+<script>
+    document.write(7 + 4);
+</script>
+
+<h1>Multplication Table</h1>
+
+<table>
+    <script>
+        for(var row=1; row<=10; row++)
+        {
+            var html ="  <tr>";
+            for(var col=1; col<=10; col++)
+            {
+                html+="    <td>"+row * col+"</td>";
+            }
+            html+="  </tr>";
+            document.write(html);
+        }
+    </script>
+</table>
+<script src="a_plus_b.js"></script>
+
+<h1>Get Element</h1>
+A=<input id="a"/>
+B=<input id="b"/>
+
+<button onclick="add()">Add</button>
+<br/>
+C=<input id="c"/>
+
+<!--<script>
+    function add()
+    {
+        alert("onclick happened!");
+        var a=document.getElementById("a").value;
+        var b=document.getElementById("b").value;
+        var c = parseInt(a) + parseInt(b);
+        document.getElementById("c").value = c;
+        //return c;
+    }
+</script>-->
+
+<h1>Change Anchor</h1>
+<a id="myAnchor" href="http://google.com">Google</a>
+<button onclick="changeAnchor()">Changed!</button>
+
+<script src="change_url.js"></script>
+<p style="width: 200px; visibility: hidden">
+
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</p>
 
 </body>
 </html>
