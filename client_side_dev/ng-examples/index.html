@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WhiteBoardApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="courseService.js"></script>
+    <script src="courseEdit.controller.js"></script>
+    <script src="courseList.controller.js"></script>
+    <script src="profile.controller.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+    <br/>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#/">All Courses</a></li>
+        <li><a href="#/profile">Profile</a></li>
+        <li><a href="#/message">Messages</a></li>
+    </ul>
+    <div ng-view></div>
+
+    <hr/>
+</div>
+
+</body>
+</html>

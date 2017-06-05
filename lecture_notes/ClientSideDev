@@ -5,3 +5,12 @@
 -Angular js introduction
 -JQuery introduction
 
+MVC
+-ng-app
+-ng-controller
+-ng-model
+-ng-repeat
+-ng-href
+-ngRoute and ng-view (single page application)
+-code refactory
+-using ng factory (create service)

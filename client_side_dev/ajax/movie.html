@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Movie</title>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <!--<script src="../../bower_components/jquery/dist/jquery.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="imdb.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Search IMDB</h1>
+
+    <a href="http://api.myapifilms.com/imdb/idIMDB?title=matrix&token=dc5ade4f-960b-43ea-a5cf-2e17b29e5c13">Search for Matrix</a>
+
+    <input type="text" id="movieComp" class="form-control" placeholder="Company Name"/>
+    <button id="searchMovieByComp" class="btn btn-primary btn-block">Search by Comp</button>
+
+    <input type="text" id="movieTitle" class="form-control" placeholder="Terminator"/>
+    <button id="searchMovie" class="btn btn-primary btn-block">Search</button>
+
+    <h2>Results</h2>
+    <table class="table table-striped" id="results">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Plot</th>
+            <th>Poster</th>
+        </tr>
+        </thead>
+        <tbody id="container">
+        <tr id="template">
+            <td><a href="#" class="link">Avatar</a></td>
+            <td class="plot">I love the blue folks. Dancing with wolves, but in another planet</td>
+            <td><img src="" class="poster"/></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
