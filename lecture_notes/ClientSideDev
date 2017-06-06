@@ -10,7 +10,12 @@ MVC
 -ng-controller
 -ng-model
 -ng-repeat
--ng-href
 -ngRoute and ng-view (single page application)
--code refactory
+-code refactor
+
+-ng-href
+-$routeParams
+-update ngRoute to 1.6 should add in #!/routeName
+-name controller and using var vm =  this
 -using ng factory (create service)
+-using ng to extend HTML file
