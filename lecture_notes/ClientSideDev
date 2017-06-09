@@ -18,3 +18,4 @@ MVC
 -name controller and using var vm =  this
 -using ng factory (create service)
 -using ng to extend HTML file
+-using java script strict compare === instead of ==
