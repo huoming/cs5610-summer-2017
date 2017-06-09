@@ -13,8 +13,7 @@ MVC
 -ngRoute and ng-view (single page application)
 -code refactor
 
--ng-href
--$routeParams
+-pass parameter in URL and using $routeParams to get values from a URL
 -update ngRoute to 1.6 should add in #!/routeName
 -name controller and using var vm =  this
 -using ng factory (create service)

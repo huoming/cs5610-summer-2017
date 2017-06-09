@@ -1,0 +1,28 @@
+body { padding-top: 70px; }
+
+.cl-btn-top-margin{
+    margin-top: 20px;
+}
+
+.cl-form-control-margin{
+    margin-top: 10px;
+}
+
+.cl-blue-navbar{
+    background-color: #337ab7;
+}
+
+.cl-navbar-text{
+    color: #fff;
+    font-weight: bold;
+}
+.cl-form-bottom-padding{
+    margin-bottom: 2em;
+}
+
+.cl-list-item-borderless {
+    border-top: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+}

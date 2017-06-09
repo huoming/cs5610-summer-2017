@@ -10,7 +10,7 @@
                         templateUrl: "courseList.view.html",
                         controller: "courseList.controller"
                     })
-                .when("/course/:index",
+                .when("/course/:id",
                     {
                         templateUrl: "courseEdit.view.html",
                         controller: "courseEdit.controller"
