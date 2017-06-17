@@ -9,14 +9,20 @@
                         /*templateUrl: "courseList/courseList.view.html",*/
                         templateUrl: "courseList.view.html",
                         controller: "courseList.controller",
-                        controllerAs: "courseCtrl"
+                        controllerAs: "model"
                     })
-                .when("/course/:index/:title",
+                /*.when("/course/:index/:title",
                     {
                         templateUrl: "courseEdit.view.html",
                         controller: "courseEdit.controller",
                         controllerAs: "model"
-                    })
+                    })*/
+                .when("/course/:id",
+                 {
+                 templateUrl: "courseEdit.view.html",
+                 controller: "courseEdit.controller",
+                 controllerAs: "model"
+                 })
                 .when("/profile",
                     {
                         /*templateUrl: "profile/profile.view.html",*/

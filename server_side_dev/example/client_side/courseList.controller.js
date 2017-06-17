@@ -5,31 +5,57 @@
     
     function courseListCtrl(CourseService) {
         var vm = this;
-        
+        init();
+
         vm.addCourse = addCourse;
         vm.removeCourse = removeCourse;
         vm.selectCourse = selectCourse;
         vm.updateCourse = updateCourse;
 
-        vm.courses = CourseService.getAllCourses();
+        //vm.courses = CourseService.getAllCourses();
+
+       /* CourseService.getAllCourses()
+            .success(function (response) {
+                vm.courses = response;
+            });
+*/
+
+
+       function init() {
+           /*var p = CourseService.getAllCourses();
+           p
+               .then(function (response) {
+                   console.log("success");
+                   vm.courses = response.data;
+               }, function (error) {
+                   console.log("error msg: " + error);
+               });*/
+           CourseService.getAllCourses()
+               .then(function (response) {
+                   vm.courses = response.data;
+                   }
+               );
+       }
 
         function updateCourse(course)
         {
-            var new_course = vm.courses[vm.selectedCourseIndex];
+           /* var new_course = vm.courses[vm.selectedCourseIndex];
             CourseService.updateCourse(new_course, vm.selectedCourseIndex);
-            vm.courses = CourseService.getAllCourses();
+            vm.courses = CourseService.getAllCourses();*/
         }
 
-        function selectCourse(index)
+        function selectCourse(course)//(index)
         {
-            vm.selectedCourseIndex = index;
+            console.log("select a course");
+            //vm.selectedCourseIndex = index;
             /*vm.newCourse = {
                 title: vm.courses[index].title,
                 seats: vm.courses[index].seats,
                 start: vm.courses[index].start
             };*/
 
-            vm.newCourse = CourseService.getCourseByIndex(index);
+            //vm.newCourse = CourseService.getCourseByIndex(index);
+            vm.newCourse = course;
         }
 
         function removeCourse(course)
@@ -42,15 +68,23 @@
         {
             console.log("add course: " + course.title);
             var newCourse = {
+                _id: new Date().getTime(),
                 title: course.title,
                 seats: course.seats,
                 start: course.start
             };
 
+            CourseService.addCourse(newCourse)
+                .then(function (response) {
+                    console.log(response);
+                }, function (error) {
+                    console.log(error);
+                });
+
             //vm.courses.push(newCourse);
 
-            CourseService.addCourse(newCourse);
-            vm.courses = CourseService.getAllCourses();
+            /*CourseService.addCourse(newCourse);
+            vm.courses = CourseService.getAllCourses();*/
         }
 
         /*vm.hello = "Hello from CoursesController";

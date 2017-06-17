@@ -25,7 +25,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="course in courses"
+    <tr ng-repeat="course in courseCtrl.courses"
         ng-class="{'success' : $index == selectedCourseIndex}">
         <td>{{course.title}}</td>
         <td>{{course.seats}}</td>
@@ -44,7 +44,7 @@
             <!--<a ng-href="#/course/{{$index}}" class="btn btn-warning">
                 Details
             </a>-->
-            <a href="#/course/{{$index}}" class="btn btn-warning">
+            <a ng-href="#/course/{{$index}}/{{course.title}}" class="btn btn-warning">
                 Details
             </a>
         </td>

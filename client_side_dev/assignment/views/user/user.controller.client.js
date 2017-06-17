@@ -47,6 +47,9 @@
             }
             else {
                 vm.error = "Username already exists.";
+                $timeout(function () {
+                    vm.error = null;
+                }, 3000);
             }
         }
     }

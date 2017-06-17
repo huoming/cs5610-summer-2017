@@ -3,13 +3,18 @@
         .module("WhiteBoardApp")
         .controller("courseEdit.controller",courseEditCtrl);
     
-    function courseEditCtrl($scope, $routeParams) {
+    function courseEditCtrl($routeParams) {
         console.log("load course edit controller!");
 
-        //var course_index = $routeParams.id;
+        var vm = this;
 
-        var course_index = $routeParams['id'];
+        //var course_index = $routeParams.index;
+        var course_index = $routeParams['index'];
+        var course_title = $routeParams['title'];
+        var course_seats = $routeParams['seats'];
 
-        $scope.courseId = "Course: " + course_index;
+        vm.courseId = "Course: " + course_index;
+        vm.courseTitle = "Course: " + course_title;
+
     }
 })();

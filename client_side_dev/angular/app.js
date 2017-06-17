@@ -12,9 +12,10 @@
 (function () {
     angular
         .module("MyAppName", ["ngRoute"])
-        .controller("myController", myController);
+        .controller("myController",myCtrl);
 
-    function myController() {
-        $scope.hello = "Angular JS Hello World!";
+    function myCtrl($scope) {
+        $scope.hello="Hello World!";
+        $scope.second_hello = "Hello World Second Timee!";
     }
 })();

@@ -1,0 +1,59 @@
+<h1>Courses</h1>
+<h1>Courses</h1>
+
+<table class="table table-striped table-responsive">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Seats Available</th>
+        <th>Start Date</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <th><input ng-model="model.newCourse.title" class="form-control" placeholder="Title"/></th>
+        <th><input ng-model="model.newCourse.seats" class="form-control" placeholder="Seats Available" type="number"/></th>
+        <th><input ng-model="model.newCourse.start" class="form-control" type="text" datetime="yyyy-mm-dd HH:mm:ss"/></th>
+        <th>
+            <button ng-click="model.addCourse(model.newCourse)" class="btn btn-primary">
+                Add
+            </button>
+            <button
+                    ng-click="model.updateCourse(newCourse)"
+                    class="btn btn-success">
+                Update
+            </button>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="course in model.courses"
+        ng-class="{'success' : $index == selectedCourseIndex}">
+        <td>{{course.title}}</td>
+        <td>{{course.seats}}</td>
+        <td>{{course.start | date: 'medium'}}</td>
+        <td>
+            <button
+                    ng-click="model.removeCourse(course)"
+                    class="btn btn-danger">
+                Remove
+            </button>
+            <!--<button
+                    ng-click="model.selectCourse($index)"
+                    class="btn btn-info">
+                Select
+            </button>-->
+            <button
+                    ng-click="model.selectCourse(course)"
+                    class="btn btn-info">
+                Select
+            </button>
+            <!--<a href="#!/course/{{$index}}/{{course.title}}" class="btn btn-warning">
+                Details
+            </a>-->
+            <a href="#!/course/{{course._id}}" class="btn btn-warning">
+                Details
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>

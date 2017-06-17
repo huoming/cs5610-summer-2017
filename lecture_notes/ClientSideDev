@@ -19,3 +19,10 @@ MVC
 -using ng factory (create service)
 -using ng to extend HTML file
 -using java script strict compare === instead of ==
+
+3=="3" //true
+3==="3" // false
+
+1==true  //return true
+1===true  //return false
+
