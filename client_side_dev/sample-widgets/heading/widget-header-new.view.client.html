@@ -1,0 +1,45 @@
+<nav id="profile_nav_bar" class="navbar navbar-fixed-top rt-navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a href="#/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget/new"
+                   class="navbar-link rt-text-color-white rt-col-l-r-20">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </p>
+            <a class="rt-text-color-white navbar-brand">
+                Create Header Widget
+            </a>
+        </div>
+    </div>
+</nav>
+<!--Body of the Page-->
+
+<div class="container rt-form-top-padding">
+    <form>
+        <div class="form-group">
+            <label for="widget-heading-name">Name</label>
+            <input ng-model="model.widgetName" type="text" class="form-control" id="widget-heading-name"
+                   placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="widget-heading-text">Text</label>
+            <input ng-model="model.widgetText" type="text" class="form-control" id="widget-heading-text"
+                   placeholder="Text">
+        </div>
+        <div class="form-group">
+            <label for="widget-heading-size">Size</label>
+            <input ng-model="model.widgetSize" type="number" class="form-control" id="widget-heading-size"
+                   placeholder="Size">
+        </div>
+        <a ng-click="model.createWidget()" class="btn btn-primary btn-block" id="widget-heading-create-btn">Create</a>
+    </form>
+    <div ng-show="model.createError" class="alert alert-danger rt-alert-padding" role="alert">{{model.createError}}</div>
+</div>
+
+<!--Body of the Page-->
+<nav class="navbar navbar-default navbar-fixed-bottom rt-navbar">
+    <a href="#/user/{{model.uid}}" class="pull-right navbar-link">
+        <span class="glyphicon glyphicon-user rt-text-color-white"></span>
+    </a>
+</nav>

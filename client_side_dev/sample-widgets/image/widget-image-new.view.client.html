@@ -1,0 +1,54 @@
+<nav id="profile_nav_bar" class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <p class="navbar-text pull-left">
+                <a href="#/user/{{model.uid}}/website/{{model.wid}}/page/{{model.pid}}/widget/new"
+                   class="navbar-link">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </p>
+            <a class="navbar-brand">
+                Create Image Widget
+            </a>
+        </div>
+    </div>
+</nav>
+<!--Body of the Page-->
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="widget-image-name">Name</label>
+            <input ng-model="model.widgetName" type="text" class="form-control" id="widget-image-name"
+                   placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="widget-image-text">Text</label>
+            <input ng-model="model.widgetText" type="text" class="form-control" id="widget-image-text"
+                   placeholder="Text">
+        </div>
+        <div class="form-group">
+            <label for="widget-image-url">URL</label>
+            <input ng-model="model.widgetUrl" type="text" class="form-control" id="widget-image-url"
+                   placeholder="http://www.example.com">
+        </div>
+        <div class="form-group">
+            <label for="widget-image-width">Width</label>
+            <input ng-model="model.widgetWidth" type="text" class="form-control" id="widget-image-width"
+                   placeholder="100%">
+        </div>
+        <div class="form-group">
+            <label for="widget-image-file-chooser">Upload</label>
+            <input type="file" id="widget-image-file-chooser">
+            <p class="help-block">Upload the image from your device.</p>
+        </div>
+        <a id="widget-image-upload-btn" class="btn btn-primary btn-block">Upload Image</a>
+        <a ng-click="model.createWidget()" class="btn btn-primary btn-block" id="widget-heading-create-btn">Create</a>
+    </form>
+    <div ng-show="model.createError" class="alert alert-danger" role="alert">{{model.createError}}</div>
+</div>
+<!--Body of the Page-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <a href="#/user/{{model.uid}}" class="pull-right navbar-link">
+        <span class="glyphicon glyphicon-user"></span>
+    </a>
+</nav>
