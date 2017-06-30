@@ -10,11 +10,11 @@
         <th>Action</th>
     </tr>
     <tr>
-        <th><input ng-model="model.newCourse.title" class="form-control" placeholder="Title"/></th>
-        <th><input ng-model="model.newCourse.seats" class="form-control" placeholder="Seats Available" type="number"/></th>
-        <th><input ng-model="model.newCourse.start" class="form-control" type="text" datetime="yyyy-mm-dd HH:mm:ss"/></th>
+        <th><input ng-model="newCourse.title" class="form-control" placeholder="Title"/></th>
+        <th><input ng-model="newCourse.seats" class="form-control" placeholder="Seats Available" type="number"/></th>
+        <th><input ng-model="newCourse.start" class="form-control" type="text" datetime="yyyy-mm-dd HH:mm:ss"/></th>
         <th>
-            <button ng-click="model.addCourse(model.newCourse)" class="btn btn-primary">
+            <button ng-click="model.addCourse(newCourse)" class="btn btn-primary">
                 Add
             </button>
             <button

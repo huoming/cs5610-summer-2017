@@ -4,6 +4,7 @@
         .directive("jgaSortable", makeSortable);
 
     function makeSortable() {
+
         function linker(scope, element, attrb) {
             var start = -1;
             var end = -1;

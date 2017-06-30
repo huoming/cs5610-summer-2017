@@ -1,3 +1,5 @@
+/*var users = require("./users.mock.json");*/
+
 module.exports = function(app){
 
     var users = [
@@ -7,21 +9,14 @@ module.exports = function(app){
         {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
     ];
 
-    app.get('/api/user', function (req, res) {
 
-         console.log("get uri");
-         console.log("test: " + req.query.username);
-         res.sendStatus(200);
-     });
-
+    // GET Calls.
+    //app.get('/api/user?username=username', findUserByUsername);
+    app.get('/api/user', findUserByCredentials);
+    app.get('/api/user/:uid', findUserById);
 
     // POST Calls.
     app.post('/api/user', createUsers);
-
-    // GET Calls.
-    app.get('/api/user?username=username', findUserByUsername);
-    app.get('/api/user?username=username&password=password', findUserByCredentials);
-    app.get('/api/user/:uid', findUserById);
 
     // PUT Calls.
     app.put('/api/user/:uid', updateUser);
@@ -64,34 +59,40 @@ module.exports = function(app){
     }
 
     function findUserByCredentials (req, res) {
-        /*var username = req.query.username;
+        var username = req.query.username;
         var pswd = req.query.password;
 
-        console.log("username: " + username);
-        console.log("pswd: " + pswd);
-
-        for (u in users){
+        /*for (u in users){
             var user = users[u];
             if(user.username === username && user.password === pswd){
                 res.status(200).send(user);
                 return;
             }
-        }
-        //res.status(404).send("not found!");*/
-        res.send(users[0]).sendStatus(200);
+        }*/
+
+        var user = users.find(function (u) { return u.username==username && u.password==pswd  });
+        res.send(user);
     }
 
     function findUserById(req, res) {
         var uid = req.params.uid;
 
-        for (u in users){
+        /*for (u in users){
             var user = users[u];
             if(user._id === uid){
                 res.status(200).send(user);
                 return;
             }
+        }*/
+        var user = users.find(function (u) { return u._id==uid });
+        if(user)
+        {
+            res.send(user);
         }
-        res.status(404).send("not found!");
+        else
+        {
+            res.status(404).send("not found!");
+        }
     }
 
     function updateUser(req,res) {
