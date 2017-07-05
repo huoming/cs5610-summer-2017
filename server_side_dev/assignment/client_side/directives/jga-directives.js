@@ -16,9 +16,7 @@
                     stop: function (event, ui) {
                         end = $(ui.item).index();
                         console.log(start, end);
-                        // if(start >= end) {
-                        //     start--;
-                        // }
+
                         if(end >= start){
                             end = end + 1;
                         }

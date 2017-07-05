@@ -1,7 +1,7 @@
 module.exports = function(app){
 
     var multer = require('multer'); // npm install multer --save
-    var upload = multer({ dest: __dirname+'/../../public/assignment/uploads' });
+    var upload = multer({ dest: __dirname+'/../../../../server_side_dev/assignment/public/uploads' });
 
     var widgets = [
         { "_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
@@ -15,24 +15,28 @@ module.exports = function(app){
         { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
     ];
 
-
-    app.post ("/api/upload", upload.single('file'), uploadImage);
+    app.post ('/api/upload', upload.single('uploadFile'), uploadImage);
 
     function uploadImage(req, res) {
-        var widgetId = req.body.widgetId;
-        var width = req.body.width;
-        var file = req.file;
+        var widgetId      = req.body.widgetId;
+        var width         = req.body.width;
+        var myFile        = req.file;
+        var userId        = req.body.userId;
+        var websiteId     = req.body.websiteId;
+        var pageId        = req.body.pageId;
 
-        var uploadDetails = {
-            originalname : file.originalname,
-            filename : file.filename,
-            fullpath : file.path,
-            destination : file.destination,
-            size : file.size,
-            mimetype : file.mimetype
-        };
+        console.log("Here's our file: ");
+        console.log(myFile);
 
-        res.send(uploadDetails);
+        var originalname  = myFile.originalname; // file name on user's computer
+        var filename      = myFile.filename;     // new file name in upload folder
+        var path          = myFile.path;         // full path of uploaded file
+        var destination   = myFile.destination;  // folder where file is saved to
+        var size          = myFile.size;
+        var mimetype      = myFile.mimetype;
+
+        res.redirect("/#!/user/"+userId+"/website/"+websiteId+"/page/"+pageId+"/widget/"+widgetId);
+        //res.redirect("assignment/client_side/#!/login");
     }
 
 };

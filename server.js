@@ -14,14 +14,5 @@ app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
 
-/*
-app.get('/api/user/:uid', function (req, res) {
-    var uid = req.params.uid;
-    console.log("get uri");
-    res.sendStatus(200);
-});
-*/
-
-
 //require("./temp/assignment/server_side/app.js")(app);
 require("./server_side_dev/assignment/server_side/app.js")(app);

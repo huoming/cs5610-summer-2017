@@ -12,7 +12,9 @@ module.exports = function(app){
 
     // GET Calls.
     //app.get('/api/user?username=username', findUserByUsername);
+    //app.get('/api/user?username=username&password=password', findUserByUsername);
     app.get('/api/user', findUserByCredentials);
+
     app.get('/api/user/:uid', findUserById);
 
     // POST Calls.

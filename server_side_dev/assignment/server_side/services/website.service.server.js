@@ -17,6 +17,7 @@ module.exports = function(app){
 
     //GET Calls
     app.get('/api/user/:userId/website',findAllWebsitesForUser);
+
     app.get('/api/website/:websiteId',findWebsiteById);
 
     //PUT Calls
@@ -43,14 +44,22 @@ module.exports = function(app){
     }
 
     function findAllWebsitesForUser(req, res) {
-        var uid = req.userId;
+
+        var uid = req.params.userId;
+        console.log("user id: " + uid);
+        //var results = websites.filter(function (w) { return parseInt(w.developerId) == parseInt(uid); });
+
+        console.log("findAllWebsitesForUser");
+
         var results = [];
-        for (w in websites) {
+        for (var w in websites) {
             var website = websites[w];
             if (parseInt(website.developerId) === parseInt(uid)) {
                 results.push(website);
             }
         }
+
+        console.log(results);
         res.send(results);
     }
 
