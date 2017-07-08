@@ -14,5 +14,7 @@ app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
 
-//require("./temp/assignment/server_side/app.js")(app);
-require("./server_side_dev/assignment/server_side/app.js")(app);
+require("./temp/assignment/server_side/app.js")(app);
+//require("./temp/db_assignment/server_side/app.js")(app);
+//require("./server_side_dev/assignment/server_side/app.js")(app);
+//require("./database_dev/assignment/server_side/app.js")(app);
