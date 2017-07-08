@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestDirective">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Directivess</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+
+    <!--JQUERY-->
+    <link type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="sort-example-simple.js.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-controller="MyController">
+<!--<hello-world-example></hello-world-example>-->
+
+<script>
+    $(function(){
+        var start = -1;
+        var end = -1;
+
+        $(".sortable").sortable({
+                start:function (event, ui) {
+                    start = $(ui.item).index();
+                    console.log("start: " + start );
+                }
+            },
+            {
+                stop:function (event, ui) {
+                    end = $(ui.item).index();
+                    console.log("end: " + end );
+                }
+            }
+        );
+    });
+</script>
+<!--
+<ul class="sortable">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+    <li>Five</li>
+</ul>
+-->
+
+<div>
+    <ul test-sortable callback="sortItems(start, end)">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+    </ul>
+</div>
+
+</body>
+</html>
