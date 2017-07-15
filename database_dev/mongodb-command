@@ -1,0 +1,2 @@
+ ./mongoexport.exe -h ds149412.mlab.com:49412 -d heroku_cpmsfk1m -c user -u cs5610-webdv -p yourpassword -f C:\Users\ming.huo\use.json
+ ./mongoimport.exe -h ds149412.mlab.com:49412 -d heroku_cpmsfk1m -c user -u cs5610-webdv -p yourpassword --file C:\Users\ming.huo\use.json
