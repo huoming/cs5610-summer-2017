@@ -1,3 +1,4 @@
+
 module.exports = function(mongoose){
     var userSchema = require('./user.schema.server.js')(mongoose);
     var userModel = mongoose.model('User', userSchema);
@@ -47,10 +48,11 @@ module.exports = function(mongoose){
         return userModel.findOne({username : uname})
     }
 
-    function findUserByCredentials(uname, pswrd){
+
+    function findUserByCredentials(username, password){
         return userModel.findOne({
-            username : uname,
-            password : pswrd
+            username : username,
+            password : password
         });
     }
 
@@ -85,5 +87,4 @@ module.exports = function(mongoose){
             _id : userId
         });
     }
-
 };

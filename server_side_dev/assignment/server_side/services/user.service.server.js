@@ -28,6 +28,7 @@ module.exports = function(app){
 
     /*API implementation*/
     function createUsers(req, res) {
+        console.log("create user");
         var user = req.body;
 
         var newUser = {

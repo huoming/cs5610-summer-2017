@@ -1,4 +1,4 @@
-module.exports = function(app, model){
+module.exports = function(app, models){
     var users = [];
     // POST Calls.
     app.post('/api/user', createEntity);
@@ -14,12 +14,11 @@ module.exports = function(app, model){
     app.delete('/api/user/:uid', deleteFromSystem);
 
     /* REST Functions */
-
     function getUser(req, res) {
         var query = req.query;
         // var user = null;
         if(query.username && query.password){
-            model
+            models
                 .userModel
                 .findUserByCredentials(query.username, query.password)
                 .then(
@@ -64,16 +63,30 @@ module.exports = function(app, model){
         var user = req.body;
         model
             .userModel
-            .createUser(user)
+            .findUserByUsername(user.username)
             .then(
-                function(newUser){
-                    res.json(newUser);
-                },
-                function(error){
-                    res.sendStatus(400).send(error);
+                function (response) {
+                    if(response){
+                        //error username already exist
+                        res.sendStatus(400).send(error);
+                    }
+                    else {
+                        model
+                            .userModel
+                            .createUser(user)
+                            .then(
+                                function(newUser){
+                                    res.json(newUser);
+                                },
+                                function(error){
+                                    res.sendStatus(400).send(error);
+                                }
+                            );
+                    }
                 }
             );
     }
+    
     function updateDetails(req, res){
         var uid = req.params.uid;
         var user = req.body;
