@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WebAppMaker">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel='stylesheet' href="../../../node_modules/textangular/dist/textAngular.css">
+    <script src="../../../node_modules/textangular/dist/textAngular-rangy.min.js"></script>
+    <script src="../../../node_modules/textangular/dist/textAngular-sanitize.min.js"></script>
+    <script src="../../../node_modules/textangular/dist/textAngular.min.js"></script>
+
+     <link href="css/style.css" rel="stylesheet"/>
+
+    <script src="directives/wbdv-sortable.js"></script>
+
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+    <!--Controllers-->
+    <script src="views/user/user.controller.client.js"></script>
+    <script src="views/website/website.controller.client.js"></script>
+    <!--            <script src="views/page/page.controller.client.js"></script>
+        <script src="views/widget/widget.controller.client.js"></script>-->
+
+    <!--Services-->
+    <script src="services/user.service.client.js"></script>
+    <script src="services/website.service.client.js"></script>
+    <script src="services/page.service.client.js"></script>
+    <!--<script src="services/widget.service.client.js"></script>-->
+
+    <script src="test.controller.client.js"></script>
+
+    <title>Web App Maker</title>
+</head>
+<body>
+<div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<nav id="top-nav-bar" class="navbar navbar-fixed-top cl-blue-navbar">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="container-fluid">
+                <a href="#/user/{{model.uid}}/website" class="navbar-text pull-left">
+                    <span class="glyphicon glyphicon-chevron-left cl-navbar-text" aria-hidden="true"></span>
+                </a>
+                <a href="#/user/{{model.uid}}/website/new" class="navbar-text cl-navbar-text pull-right">
+                    <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </a>
+                <a class="navbar-brand cl-navbar-text" href="#">
+                    Websites
+                </a>
+            </div>
+        </div>
+
+        <div class="col-xs-8">
+            <div class="container-fluid cl-blue-navbar">
+                <a href="#/user/{{model.uid}}/website" class="navbar-text cl-navbar-text pull-left ">
+                    <span class="glyphicon glyphicon-chevron-left rt-color-white" aria-hidden="true"></span>
+                </a>
+                <a ng-click="model.editWebsite()" class="navbar-text pull-right cl-navbar-text">
+                    <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+                </a>
+                <a class="navbar-brand cl-navbar-text">
+                    Edit Website
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="list-group">
+                <ul class="list-group">
+                    <li ng-repeat="website in model.websites" class="list-group-item borderless">
+                        <a class="cl-hyperlinks" href="#/user/{{website.developerId}}/website/{{website._id}}/page">{{website.name}}</a>
+                        <a href="#/user/{{website.developerId}}/website/{{website._id}}" class="navbar-link pull-right">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cl-vertical-line"></div>
+        <div class="col-xs-8">
+            <div class="container-fluid">
+                <form>
+                    <div class="form-group">
+                        <label for="edit-website-name">Name</label>
+                        <input ng-model="model.currentWebsiteName" type="text" class="form-control" id="edit-website-name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-website-description">Description</label>
+                        <textarea ng-model="model.currentWebsiteDesc" id="edit-website-description" class="form-control" rows="5" placeholder="Description"></textarea>
+                    </div>
+                    <a ng-click="model.deleteWebsite()" class="btn btn-danger btn-block" id="edit-website-delete-btn">Delete</a>
+                </form>
+                <div ng-show="model.errorText" class="alert alert-danger" role="alert">{{model.errorText}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom cl-blue-navbar">
+    <a href="#/user/{{model.uid}}" class="navbar-link navbar-text pull-right cl-navbar-text cl-icon-padding">
+        <span class="glyphicon glyphicon-user rt-text-color-white"></span>
+    </a>
+</nav>
