@@ -22,7 +22,7 @@ module.exports = function(app, models){
     app.delete('/api/user/:uid', deleteFromSystem);
 
     app.use(session({
-        secret: 'this is the secret',
+        secret: 'type something',
         resave: true,
         saveUninitialized: true
     }));
@@ -30,11 +30,13 @@ module.exports = function(app, models){
     app.use(cookieParser());
     app.use(passport.initialize());
     app.use(passport.session());
+
     passport.use('LocalStrategy', new LocalStrategy(localStrategy));
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
 
     //passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
+
   /*  var facebookConfig = {
         clientID     : process.env.FACEBOOK_CLIENT_ID,
         clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
@@ -110,7 +112,16 @@ module.exports = function(app, models){
     function localStrategy(username, password, done) {
         console.log("localStrategy");
         var user = {username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  };
-        return done(null, user);
+
+        if(user.password === password ){
+            return done(null, user);
+        }
+        else
+        {
+            return done(null, false, {message: 'User not found!'});
+        }
+
+
 
         /*models
             .userModel
@@ -139,7 +150,7 @@ module.exports = function(app, models){
     }
 
     function login(req, res) {
-        console.log("start login!");
+        console.log("start login: " +  req.isAuthenticated());
         var user = req.user;
         if (user != null){
             delete user.password;
@@ -154,6 +165,17 @@ module.exports = function(app, models){
         // console.log("Hello from logout");
         req.logOut();
         res.sendStatus(200);
+    }
+
+    app.post('/api/adminLogged',checkAdmin);
+    function checkAdmin(req, res) {
+        if(req.isAuthenticated())
+        {
+            var user = req.user;
+            if(user.role === "Admin"){
+                res.send(user);
+            }
+        }
     }
 
     /*TEST FUNCTIONS*/
