@@ -16,5 +16,4 @@ app.listen(app.get('port'), function() {
 // set ejs as the view engine
 app.set('view engine', 'ejs');
 
-
 require("./server_side/app")(app);

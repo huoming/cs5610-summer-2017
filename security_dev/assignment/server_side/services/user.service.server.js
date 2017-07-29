@@ -1,6 +1,7 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 //var FacebookStrategy = require('passport-facebook').Strategy;
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 var bcrypt = require("bcrypt-nodejs");
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -35,16 +36,38 @@ module.exports = function(app, models){
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
 
-    //passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
+    passport.use(new GoogleStrategy({
+            clientID: process.evn.GOOGLE_CLIENTID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            callbackURL: process.env.GOOGLE_CALLBACL    //"http://www.example.com/auth/google/callback"
+        },
+        function(accessToken, refreshToken, profile, cb) {
+            models.userModel.findUserByGoogleId({ googleId: profile.id }, function (err, user) {
+                return cb(err, user);
+            });
+        }
+    ));
 
-  /*  var facebookConfig = {
+    app.get('/auth/google',
+        passport.authenticate('google', { scope: ['profile'] }));
+
+    app.get('/auth/google/callback',
+        passport.authenticate('google', { failureRedirect: '/login' }),
+        function(req, res) {
+            // Successful authentication, redirect home.
+            res.redirect('/profile');
+        });
+
+    passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
+
+  var facebookConfig = {
         clientID     : process.env.FACEBOOK_CLIENT_ID,
         clientSecret : process.env.FACEBOOK_CLIENT_SECRET,
         callbackURL  : process.env.FACEBOOK_CALLBACK_URL,
         profileFields: ['id', 'email', 'first_name', 'last_name']
-    };*/
+    };
 
-   /* function facebookStrategy(token, refreshToken, profile, done) {
+    function facebookStrategy(token, refreshToken, profile, done) {
         models
             .userModel
             .findUserByFacebookId(profile.id)
@@ -81,7 +104,15 @@ module.exports = function(app, models){
                     }
                 });
     }
-*/
+
+    app.get('/auth/facebook', passport.authenticate('facebook'));
+
+    app.get('/auth/facebook/callback',
+        passport.authenticate('facebook', { failureRedirect: '/login' }),
+        function(req, res) {
+            // Successful authentication, redirect home.
+            res.redirect('/profile');
+        });
 
     /*Config Passport*/
     app.post('/api/login', passport.authenticate('LocalStrategy'), login);

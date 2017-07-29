@@ -9,6 +9,7 @@ module.exports = function(mongoose){
         lastName : String,
         email : String,
         phone : String,
+        GoogleId: String,
         websites : [{
             type: Schema.Types.ObjectId,
             ref : 'Website'

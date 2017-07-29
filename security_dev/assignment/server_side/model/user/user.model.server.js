@@ -9,6 +9,7 @@ module.exports = function(mongoose){
         'findUserById' : findUserById,
         'findUserByUsername' : findUserByUsername,
         'findUserByCredentials' : findUserByCredentials,
+        'findUserByGoogleId': findUserByGoogleId,
         'updateUser' : updateUser,
         'removeWebsiteFromUser' : removeWebsiteFromUser,
         'deleteUser' : deleteUser
@@ -17,6 +18,12 @@ module.exports = function(mongoose){
     return api;
 
     // Function Definition Section
+
+    function findUserByGoogleId(googleId){
+        return userModel.findOne({
+            GoogleId : googleId
+        });
+    }
 
     function createUser(user){
         /*var newUser = {
